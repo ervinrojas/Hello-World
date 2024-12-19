@@ -8,17 +8,57 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f9;
-            color: #333;
+            background: linear-gradient(135deg, #007bff, #6c757d);
+            color: #fff;
             padding: 20px;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            color: #007bff;
+            color: #ffdd57;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <h1>Hello, World!</h1>
-    <p>Welcome to your first webpage. This is a simple example of HTML.</p>
+    <p>Welcome to your first enhanced webpage with interactivity!</p>
+    <button onclick="displayMessage()">Click Me!</button>
+    <p id="message"></p>
+
+    <script>
+        function displayMessage() {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'You clicked the button! Welcome to dynamic web pages.';
+        }
+    </script>
 </body>
 </html>
+
